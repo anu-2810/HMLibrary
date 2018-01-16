@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HMLibrary_Example' do
+  pod 'HMLibrary', :path => '../'
+
+  target 'HMLibrary_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

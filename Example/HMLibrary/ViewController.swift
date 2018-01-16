@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let toggleButton = UIButton(frame: CGRectMake(10, 100, 125, 30))
         toggleButton.setTitle("Tell the length", forState: .Normal)
         toggleButton.setTitleColor(UIColor.redColor(), forState: .Normal)
-        toggleButton.addTarget(self, action: "toggleBlinking", forControlEvents: .TouchUpInside)
+        toggleButton.addTarget(self, action: #selector(ViewController.toggleBlinking), forControlEvents: .TouchUpInside)
         view.addSubview(toggleButton)
 
        
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     func toggleBlinking() {
         if (isBlinking) {
-           answerLabel.text = questLabel.length()
+           answerLabel.text = questLabel.text.length()
         } else {
             answerLabel.text = ""
         }

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var isBlinking = false
     let questLabel = UILabel(frame: CGRectMake(10, 20, 200, 30))
     let answerLabel = UILabel(frame: CGRectMake(10, 60, 200, 30))
+    let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 120, 200, 30))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,12 @@ class ViewController: UIViewController {
         view.addSubview(answerLabel)
        
       
+        blinkingLabel.text = "I blink!"
+        blinkingLabel.font = UIFont.systemFontOfSize(20)
+        view.addSubview(blinkingLabel)
+        blinkingLabel.startBlinking()
+        isBlinking = true
+        
         // Create a UIButton to toggle the blinking
         let toggleButton = UIButton(frame: CGRectMake(10, 100, 125, 30))
         toggleButton.setTitle("Tell the length", forState: .Normal)
@@ -43,8 +50,10 @@ class ViewController: UIViewController {
     func toggleBlinking() {
         if (isBlinking) {
            answerLabel.text = questLabel.text.length()
+            blinkingLabel.stopBlinking()
         } else {
             answerLabel.text = ""
+            blinkingLabel.startBlinking()
         }
         isBlinking = !isBlinking
     }

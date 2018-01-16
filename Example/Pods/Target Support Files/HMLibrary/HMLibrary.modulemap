@@ -1,0 +1,6 @@
+framework module HMLibrary {
+  umbrella header "HMLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

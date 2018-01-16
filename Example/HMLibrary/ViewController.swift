@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     let questLabel = UILabel(frame: CGRectMake(10, 20, 200, 30))
     let answerLabel = UILabel(frame: CGRectMake(10, 60, 200, 30))
     let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 120, 200, 30))
-    let txtFld = HMMobilNumberTextField(frame: CGRectMake(10, 180, 200, 50))
+    let txtFld = HMMobilNumberTextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         view.addSubview(answerLabel)
        
       
+        txtFld.frame = CGRectMake(10, 180, 200, 50)
+        view.addSubview(txtFld)
+        
         blinkingLabel.text = "I blink!"
         blinkingLabel.font = UIFont.systemFontOfSize(20)
         view.addSubview(blinkingLabel)
@@ -50,7 +53,7 @@ class ViewController: UIViewController {
     
     func toggleBlinking() {
         if (isBlinking) {
-//           answerLabel.text = "\(questLabel.text!.toInt())"
+           answerLabel.text = "\(txtFld.text!.toInt())"
             blinkingLabel.stopBlinking()
         } else {
             answerLabel.text = ""

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let questLabel = UILabel(frame: CGRectMake(10, 20, 200, 30))
     let answerLabel = UILabel(frame: CGRectMake(10, 60, 200, 30))
     let blinkingLabel = BlinkingLabel(frame: CGRectMake(10, 120, 200, 30))
+    let txtFld = HMMobilNumberTextField(frame: CGRectMake(10, 180, 200, 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
     
     func toggleBlinking() {
         if (isBlinking) {
-           answerLabel.text = questLabel.text.length()
+//           answerLabel.text = "\(questLabel.text!.toInt())"
             blinkingLabel.stopBlinking()
         } else {
             answerLabel.text = ""

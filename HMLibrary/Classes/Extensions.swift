@@ -14,7 +14,6 @@ extension String {
     ///This function is used to check whether self is a valid Mobile Number
     func isValidMobileNumber() -> Bool {
         
-        
         return true
     }
     

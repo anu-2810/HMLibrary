@@ -16,7 +16,8 @@
 		F0F25F897B29128DA94B1B7416C4B7BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F26D95066725BD8918B1EFB668368194 /* Pods-HMLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D7CF3D79152FF8F1A3E6300BB54C47 /* Pods-HMLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F438FBA762BCF7EC8B6CE683E8333809 /* HMLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C129A50F3B71AD559726F1AE6AF6E241 /* HMLibrary-dummy.m */; };
-		FA083376200DFE0F002AEF46 /* BlinkingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA083375200DFE0F002AEF46 /* BlinkingLabel.swift */; };
+		FAB72433200E1AA500F2A37F /* BlinkingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB72432200E1AA500F2A37F /* BlinkingLabel.swift */; };
+		FAB72435200E1D3900F2A37F /* HMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB72434200E1D3900F2A37F /* HMTextField.swift */; };
 		FB83BBF9A75948A4EAB3738E1E6E33CA /* Pods-HMLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A5BBCBB36F81DF55B4EEC70E422AD /* Pods-HMLibrary_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +63,8 @@
 		E31BD9859F6DF9DE6391F44A22272437 /* Pods_HMLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HMLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E33A04CC4DD9866691A26280D90F1E9C /* HMLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HMLibrary.xcconfig; sourceTree = "<group>"; };
 		E61548A49D4DAA31F9B8251EAFD1BAC1 /* Pods-HMLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HMLibrary_Tests.modulemap"; sourceTree = "<group>"; };
-		FA083375200DFE0F002AEF46 /* BlinkingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingLabel.swift; sourceTree = "<group>"; };
+		FAB72432200E1AA500F2A37F /* BlinkingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingLabel.swift; sourceTree = "<group>"; };
+		FAB72434200E1D3900F2A37F /* HMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMTextField.swift; sourceTree = "<group>"; };
 		FBC8CB789EFDC4EBC6081F857E24027F /* Pods-HMLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HMLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,9 +127,10 @@
 		3E52D59248F433ED4D4D21FBBC1C071B /* HMLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FAB72432200E1AA500F2A37F /* BlinkingLabel.swift */,
 				8DD8F0846645EAA7ACD2B8E4056BBAEF /* Extensions.swift */,
 				F001BFE9F5EDDC679CDF50BCECE4C81F /* Support Files */,
-				FA083375200DFE0F002AEF46 /* BlinkingLabel.swift */,
+				FAB72434200E1D3900F2A37F /* HMTextField.swift */,
 			);
 			name = HMLibrary;
 			path = ../..;
@@ -326,7 +329,8 @@
 			files = (
 				AF0C3830DB89954DE42D6DE178B5DD1F /* Extensions.swift in Sources */,
 				F438FBA762BCF7EC8B6CE683E8333809 /* HMLibrary-dummy.m in Sources */,
-				FA083376200DFE0F002AEF46 /* BlinkingLabel.swift in Sources */,
+				FAB72435200E1D3900F2A37F /* HMTextField.swift in Sources */,
+				FAB72433200E1AA500F2A37F /* BlinkingLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +362,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BBFF29D9EB6F161F3844380CCFAF098 /* Release */ = {
+		011471FD5436685C0535433EA1E10929 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E33A04CC4DD9866691A26280D90F1E9C /* HMLibrary.xcconfig */;
 			buildSettings = {
@@ -381,14 +385,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		0E1FB3638D328222196E79495184E910 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -421,6 +424,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		13FA985083198108BC76DC2AC6D299AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33A04CC4DD9866691A26280D90F1E9C /* HMLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HMLibrary/HMLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HMLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HMLibrary/HMLibrary.modulemap";
+				PRODUCT_NAME = HMLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -605,37 +640,6 @@
 			};
 			name = Debug;
 		};
-		A946B4A53AB29C1C9F26BDAD0A04C3AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E33A04CC4DD9866691A26280D90F1E9C /* HMLibrary.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HMLibrary/HMLibrary-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HMLibrary/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HMLibrary/HMLibrary.modulemap";
-				PRODUCT_NAME = HMLibrary;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		DABAB381D9ECACBEE146879CA8813894 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A6130E560CE747F668263F32B4E3F1D /* Pods-HMLibrary_Tests.release.xcconfig */;
@@ -702,8 +706,8 @@
 		CC5EB89DA6EB8F6AD2F4D73256637719 /* Build configuration list for PBXNativeTarget "HMLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A946B4A53AB29C1C9F26BDAD0A04C3AD /* Debug */,
-				0BBFF29D9EB6F161F3844380CCFAF098 /* Release */,
+				011471FD5436685C0535433EA1E10929 /* Debug */,
+				13FA985083198108BC76DC2AC6D299AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
